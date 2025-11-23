@@ -1,0 +1,564 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #ebf0f2;
+}
+
+.login-form {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(207, 203, 203);
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background: rgb(252, 249, 249);
+    border-radius: 7px;
+    width: 500px;
+    padding: 30px 40px;
+    gap: 20px;
+}
+
+.login-form h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* PERBAIKAN: Menggunakan container untuk label dan input */
+.form-group {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+    width: 100%;
+}
+
+.login-form .box {
+    width: 100%; 
+    max-width: 400px;
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 7px;
+    border: 1px solid gray;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login-form .box:focus {
+    border-color: #5139c8;
+    box-shadow: 0 0 5px #5139c8;
+}
+
+.btn {
+    border-radius: 4px;
+    background: rgb(175, 174, 173);
+    width: 140px;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    color: white;
+    background: #5139c8;
+}
+
+.navbar {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+
+}
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+   
+}
+
+
+.nav-link {
+    color: #050406;
+    text-decoration: none;
+    margin: 30px;
+  
+}
+
+.login-information {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ebf0f2;
+    width: 200vh;  
+    height: 150px; 
+    background-image: linear-gradient(135deg, #29323c 10%, #485563 100%);
+    border-radius: 10px;
+    padding: 20px;
+        
+}
+
+/* Tambahkan di style.css */
+
+.money-menu {
+    width: 100%;
+    padding: 20px;
+}
+
+.money-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.total-saldo, .pemasukan-saldo, .pengeluaran-saldo {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.total-saldo h5, .pemasukan-saldo h5, .pengeluaran-saldo h5 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.amount.positive {
+    color: #27ae60; /* Hijau untuk pemasukan */
+}
+
+.amount.negative {
+    color: #e74c3c; /* Merah untuk pengeluaran */
+}
+
+.total-saldo .amount {
+    color: #2980b9; /* Biru untuk saldo */
+}
+
+.month-info {
+    text-align: center;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.total-saldo small, 
+.pemasukan-saldo small, 
+.pengeluaran-saldo small {
+    color: #777;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.total-all-time {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.total-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    border-left: 4px solid #2980b9;
+}
+
+.total-container h5 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.logout-btn {
+    display: flex;
+    justify-content: end;
+    width: 700px;
+
+}
+
+.btn-logout {
+    border: none;
+    border-radius: 7px;
+    width: 90px;
+    height: 30px;
+    background: rgb(46, 43, 62);
+    color: rgb(120, 114, 128);
+    transition: 0.5s;
+}
+.btn-logout:hover {
+    background:rgb(255, 11, 11);
+    color: white;
+}    
+
+/* Style untuk pesan hemat */
+.pesan-hemat {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.pesan-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    border-left: 4px solid #2980b9;
+}
+
+.pesan-container.positive {
+    border-left-color: #27ae60;
+    background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%);
+}
+
+.pesan-container.negative {
+    border-left-color: #e74c3c;
+    background: linear-gradient(135deg, #fff8f8 0%, #f5e8e8 100%);
+}
+
+.pesan-container.neutral {
+    border-left-color: #95a5a6;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.pesan-container h5 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.pesan-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.pesan-container.positive .pesan-text {
+    color: #27ae60;
+}
+
+.pesan-container.negative .pesan-text {
+    color: #e74c3c;
+}
+
+.pesan-container small {
+    color: #7f8c8d;
+    font-size: 12px;
+}
+
+
+/* Style untuk History Transaksi */
+.history-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.history-container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.history-container h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.history-table th {
+    background: #34495e;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.history-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.history-table tr:hover {
+    background: #f8f9fa;
+}
+
+/* Badge untuk tipe transaksi */
+.tipe-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tipe-badge.pemasukan {
+    background: #d4edda;
+    color: #155724;
+}
+
+.tipe-badge.pengeluaran {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Warna amount */
+.history-table .amount.positive {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.history-table .amount.negative {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.no-data {
+    text-align: center;
+    padding: 40px;
+    color: #7f8c8d;
+}
+
+.no-data a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.no-data a:hover {
+    text-decoration: underline;
+}
+
+/* Style untuk tombol aksi di tabel */
+.aksi {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-edit, .btn-hapus {
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-edit {
+    background: #3498db;
+    color: white;
+}
+
+.btn-edit:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-hapus {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-hapus:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Style untuk tabel */
+.history-table th:nth-child(6) {
+    text-align: center;
+}
+
+.history-table td:nth-child(6) {
+    text-align: center;
+}
+
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pemasukan-items {
+    width: 500px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    height: auto; /* Ubah dari 300px ke auto */
+    border-radius: 7px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.pemasukan-items2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 40px;
+    gap: 20px;
+}
+
+.pemasukan-items2 h2 {
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group2 {  
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group2 small {
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.form-group2 input {
+    flex: 1;
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group2 input:focus {
+    border-color: #5139c8;
+    outline: none;
+    box-shadow: 0 0 5px rgba(81, 57, 200, 0.3);
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    margin: 10px 0;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #5139c8;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive untuk tombol aksi */
+@media (max-width: 768px) {
+    .aksi {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .btn-edit, .btn-hapus {
+        padding: 4px 8px;
+        font-size: 11px;
+        width: 60px;
+    }
+    
+    .history-table {
+        font-size: 14px;
+    }
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .history-table {
+        font-size: 14px;
+    }
+    
+    .history-table th,
+    .history-table td {
+        padding: 8px 10px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .money-container {
+        flex-direction: column;
+    }
+}
